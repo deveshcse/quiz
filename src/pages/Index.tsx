@@ -13,7 +13,7 @@ const Index = () => {
   const [yearRange, setYearRange] = useState([1990, 2023]);
   const [quizStarted, setQuizStarted] = useState(false);
 
-  const { data: subjects, isLoading: subjectsLoading } = useGetSubjectsQuery();
+  const { data: subjects} = useGetSubjectsQuery();
   const { data: topics } = useGetTopicsQuery(Number(selectedSubject), {
     skip: !selectedSubject,
   });
